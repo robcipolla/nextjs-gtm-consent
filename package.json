@@ -1,0 +1,58 @@
+{
+  "name": "next-gtm-consent",
+  "version": "0.0.6",
+  "description": "Test",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:esm && pnpm build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm run prettier && pnpm run lint",
+    "test": ""
+  },
+  "author": "Rob Cipolla",
+  "license": "MIT",
+  "repository": "https://github.com/robcipolla/nextjs-gtm-consent",
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "cookies-next": "^2.1.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "next": "^13.2.4",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.3"
+  },
+  "peerDependencies": {
+    "cookies-next": "^2.1.1",
+    "next": ">=11",
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "next",
+    "GDPR",
+    "GTM",
+    "Google tag manager",
+    "cookies",
+    "consent",
+    "typescript"
+  ]
+}
